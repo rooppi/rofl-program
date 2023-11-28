@@ -6,7 +6,7 @@ string qeshion = Console.ReadLine();
 
 int counter = 0;
 
-if (qeshion == "да")
+if (qeshion.ToLower() == "да")
 {
     Console.WriteLine(" Реши пример √9=?");
 
@@ -15,22 +15,29 @@ if (qeshion == "да")
     if (answer == 3)
     {
         Console.WriteLine("Молодец");
-
     }
     if (answer != 3)
     {
 
         while (counter < 5)
         {
-            Console.WriteLine("Ты лох, ответ не правельный)");
+            Console.WriteLine("Никита  лох, ответ не правельный)");
 
             counter++;
         }
     }
+    Console.WriteLine("Нажмите любую кнопку, для завершения роботы програмы:");
+    Console.ReadKey();
+    return;
 }
-else
+
+if (qeshion.ToLower() == "нет")
 {
     Console.WriteLine("ну ладно, жаль");
+}
+else 
+{
+    Console.WriteLine("Програма не смогла распадзнать ваше действие");
 };
 
 Console.ReadKey();
